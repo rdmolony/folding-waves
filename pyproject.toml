@@ -1,0 +1,17 @@
+[tool.poetry]
+name = "folding-waves"
+version = "0.1.0"
+description = "foldingwaves portfolio website built on Django/Wagtail"
+authors = ["Rowan Molony <rowan.molony@mainstreamrp.com>"]
+license = "MIT"
+readme = "README.md"
+packages = [{include = "folding_waves"}]
+
+[tool.poetry.dependencies]
+python = "^3.10"
+coderedcms = "^2.0.0"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
