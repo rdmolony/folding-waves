@@ -1,15 +1,15 @@
 [tool.poetry]
-name = "folding-waves"
+name = "config"
 version = "0.1.0"
 description = "foldingwaves portfolio website built on Django/Wagtail"
 authors = ["Rowan Molony <rowan.molony@mainstreamrp.com>"]
 license = "MIT"
 readme = "README.md"
-packages = [{include = "folding_waves"}]
 
 [tool.poetry.dependencies]
 python = "^3.10"
 coderedcms = "^2.0.0"
+django-environ = "^0.10.0"
 
 
 [build-system]
