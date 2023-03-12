@@ -70,6 +70,9 @@ INSTALLED_APPS = [
     "django.contrib.messages",
     "django.contrib.staticfiles",
     "django.contrib.sitemaps",
+    # Other 3rd Party Apps
+    "bakery",
+    "wagtailbakery",
 ]
 
 MIDDLEWARE = [
@@ -198,3 +201,8 @@ TAGGIT_CASE_INSENSITIVE = True
 # Sets default for primary key IDs
 # See https://docs.djangoproject.com/en/4.1/ref/models/fields/#bigautofield
 DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
+
+BAKERY_MULTISITE = True
+BAKERY_VIEWS = (
+	'wagtailbakery.views.AllPublishedPagesView',
+)

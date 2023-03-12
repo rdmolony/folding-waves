@@ -10,3 +10,5 @@ try:
     from .local import *  # noqa
 except ImportError:
     pass
+
+BUILD_DIR = '/tmp/build/'
