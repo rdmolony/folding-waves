@@ -2,14 +2,14 @@
 
 [[package]]
 name = "anyascii"
-version = "0.3.1"
+version = "0.3.2"
 description = "Unicode to ASCII transliteration"
 category = "main"
 optional = false
 python-versions = ">=3.3"
 files = [
-    {file = "anyascii-0.3.1-py3-none-any.whl", hash = "sha256:8707d3185017435933360462a65e2c70a4818490745804f38a5ca55e59eb56a0"},
-    {file = "anyascii-0.3.1.tar.gz", hash = "sha256:dedf57728206e286c91eed7c759505a5e45c8cd01367dd40c2f7248bb15c11f6"},
+    {file = "anyascii-0.3.2-py3-none-any.whl", hash = "sha256:3b3beef6fc43d9036d3b0529050b0c48bfad8bc960e9e562d7223cfb94fe45d4"},
+    {file = "anyascii-0.3.2.tar.gz", hash = "sha256:9d5d32ef844fe225b8bc7cba7f950534fae4da27a9bf3a6bea2cb0ea46ce4730"},
 ]
 
 [[package]]
@@ -60,18 +60,18 @@ lxml = ["lxml"]
 
 [[package]]
 name = "boto3"
-version = "1.26.89"
+version = "1.26.94"
 description = "The AWS SDK for Python"
 category = "main"
 optional = false
 python-versions = ">= 3.7"
 files = [
-    {file = "boto3-1.26.89-py3-none-any.whl", hash = "sha256:09929b24aaec4951e435d53d31f800e2ca52244af049dc11e5385ce062e106e9"},
-    {file = "boto3-1.26.89.tar.gz", hash = "sha256:e819812f16fab46fadf9b2853a46aaa126e108e7f038502dde555ebbbfc80133"},
+    {file = "boto3-1.26.94-py3-none-any.whl", hash = "sha256:619022059e255731f33cd9fe083b8fd62406efcbc07dc15660037bcaa1ba1255"},
+    {file = "boto3-1.26.94.tar.gz", hash = "sha256:9f156f4da4b0a15924196e1a8e3439d1b99cd4a463588e4bb103d1cfaf5618fa"},
 ]
 
 [package.dependencies]
-botocore = ">=1.29.89,<1.30.0"
+botocore = ">=1.29.94,<1.30.0"
 jmespath = ">=0.7.1,<2.0.0"
 s3transfer = ">=0.6.0,<0.7.0"
 
@@ -80,14 +80,14 @@ crt = ["botocore[crt] (>=1.21.0,<2.0a0)"]
 
 [[package]]
 name = "botocore"
-version = "1.29.89"
+version = "1.29.94"
 description = "Low-level, data-driven core of boto 3."
 category = "main"
 optional = false
 python-versions = ">= 3.7"
 files = [
-    {file = "botocore-1.29.89-py3-none-any.whl", hash = "sha256:b757e59feca82ac62934f658918133116b4535cf66f1d72ff4935fa24e522527"},
-    {file = "botocore-1.29.89.tar.gz", hash = "sha256:ac8da651f73a9d5759cf5d80beba68deda407e56aaaeb10d249fd557459f3b56"},
+    {file = "botocore-1.29.94-py3-none-any.whl", hash = "sha256:01b9e066b9eea719ee852e91841b92c7371f6bd388cf6186b5d55508e0f7fa1b"},
+    {file = "botocore-1.29.94.tar.gz", hash = "sha256:3748b79e6fc95c19d890aa7439a53b9d468a4c4918439b2ba5cc3c13bfaff817"},
 ]
 
 [package.dependencies]
@@ -280,14 +280,14 @@ bcrypt = ["bcrypt"]
 
 [[package]]
 name = "django-bakery"
-version = "0.13.1"
+version = "0.13.2"
 description = "A set of helpers for baking your Django site out as flat files"
 category = "main"
 optional = false
 python-versions = "*"
 files = [
-    {file = "django-bakery-0.13.1.tar.gz", hash = "sha256:b0953de5e34b195b54cdb1d4fabb27b82be7d86b91885090dd4e4c2914a3b435"},
-    {file = "django_bakery-0.13.1-py2.py3-none-any.whl", hash = "sha256:2180712ec1545fb280747a9aa4c874167ba2d72ec8b9fa0caabfc948ffded680"},
+    {file = "django-bakery-0.13.2.tar.gz", hash = "sha256:10e32f7fd312f5a98e927fb73b5fbcef749892be88a80434d4b7aa985e0b7507"},
+    {file = "django_bakery-0.13.2-py2.py3-none-any.whl", hash = "sha256:89a55953dd87a0e2d7ce1b9e5477dde4e80aed21a78399b14674dbb13507b602"},
 ]
 
 [package.dependencies]
@@ -343,6 +343,21 @@ files = [
 Django = ">=1.8"
 python-dateutil = ">=2.1"
 six = ">=1.14.0"
+
+[[package]]
+name = "django-extensions"
+version = "3.2.1"
+description = "Extensions for Django"
+category = "dev"
+optional = false
+python-versions = ">=3.6"
+files = [
+    {file = "django-extensions-3.2.1.tar.gz", hash = "sha256:2a4f4d757be2563cd1ff7cfdf2e57468f5f931cc88b23cf82ca75717aae504a4"},
+    {file = "django_extensions-3.2.1-py3-none-any.whl", hash = "sha256:421464be390289513f86cb5e18eb43e5dc1de8b4c27ba9faa3b91261b0d67e09"},
+]
+
+[package.dependencies]
+Django = ">=3.2"
 
 [[package]]
 name = "django-filter"
@@ -601,14 +616,14 @@ six = "*"
 
 [[package]]
 name = "openpyxl"
-version = "3.1.1"
+version = "3.1.2"
 description = "A Python library to read/write Excel 2010 xlsx/xlsm files"
 category = "main"
 optional = false
 python-versions = ">=3.6"
 files = [
-    {file = "openpyxl-3.1.1-py2.py3-none-any.whl", hash = "sha256:a0266e033e65f33ee697254b66116a5793c15fc92daf64711080000df4cfe0a8"},
-    {file = "openpyxl-3.1.1.tar.gz", hash = "sha256:f06d44e2c973781068bce5ecf860a09bcdb1c7f5ce1facd5e9aa82c92c93ae72"},
+    {file = "openpyxl-3.1.2-py2.py3-none-any.whl", hash = "sha256:f91456ead12ab3c6c2e9491cf33ba6d08357d802192379bb482f1033ade496f5"},
+    {file = "openpyxl-3.1.2.tar.gz", hash = "sha256:a6f5977418eff3b2d5500d54d9db50c8277a368436f4e4f8ddb1be3422870184"},
 ]
 
 [package.dependencies]
@@ -886,14 +901,14 @@ socks = ["PySocks (>=1.5.6,!=1.5.7,<2.0)"]
 
 [[package]]
 name = "wagtail"
-version = "4.2"
+version = "4.2.1"
 description = "A Django content management system."
 category = "main"
 optional = false
 python-versions = ">=3.7"
 files = [
-    {file = "wagtail-4.2-py3-none-any.whl", hash = "sha256:12a07403ecf19878a2e860cd462addd57292ad87a5419bf0a6de898d5dfe4fe6"},
-    {file = "wagtail-4.2.tar.gz", hash = "sha256:5547551b66077c7d50dd01b1f06be0d83b89a25c65aba4446669fc7c6f31831c"},
+    {file = "wagtail-4.2.1-py3-none-any.whl", hash = "sha256:cc84a5130620f0f1e9cafd17802e9f1471f339cda82e22bfa80c4509a02adf5e"},
+    {file = "wagtail-4.2.1.tar.gz", hash = "sha256:fbb5e96559a9a34258397ed7a1c766cd2f2d32497e2932472f77d6f848e5658d"},
 ]
 
 [package.dependencies]
@@ -916,7 +931,7 @@ telepath = ">=0.1.1,<1"
 Willow = ">=1.4,<1.5"
 
 [package.extras]
-docs = ["Sphinx (>=1.5.2)", "myst-parser (==0.18.1)", "pyenchant (>=3.1.1,<4)", "sphinx-autobuild (>=0.6.0)", "sphinx-copybutton (>=0.5,<1.0)", "sphinx-wagtail-theme (==5.3.2)", "sphinxcontrib-spelling (>=5.4.0,<6)"]
+docs = ["Sphinx (>=1.5.2)", "myst-parser (==0.18.1)", "pyenchant (>=3.1.1,<4)", "sphinx-autobuild (>=0.6.0)", "sphinx-copybutton (>=0.5,<1.0)", "sphinx-wagtail-theme (==6.0.0)", "sphinxcontrib-spelling (>=5.4.0,<6)"]
 testing = ["Jinja2 (>=3.0,<3.2)", "azure-mgmt-cdn (>=12.0,<13.0)", "azure-mgmt-frontdoor (>=1.0,<1.1)", "black (==22.3.0)", "boto3 (>=1.16,<1.17)", "coverage (>=3.7.0)", "curlylint (==0.13.1)", "django-pattern-library (>=0.7,<0.8)", "djhtml (==1.4.13)", "doc8 (==0.8.1)", "elasticsearch (>=5.0,<6.0)", "flake8 (>=3.6.0)", "flake8-assertive (==2.0.0)", "flake8-blind-except (==0.1.1)", "flake8-comprehensions (==3.8.0)", "flake8-print (==5.0.0)", "freezegun (>=0.3.8)", "isort (==5.6.4)", "polib (>=1.1,<2.0)", "python-dateutil (>=2.7)", "pytz (>=2014.7)", "semgrep (==1.3.0)", "wagtail-factories (>=4.0,<5)"]
 
 [[package]]
@@ -997,4 +1012,4 @@ testing = ["Pillow (>=6.0.0,<10.0.0)", "Wand (>=0.6,<1.0)", "mock (>=3.0,<4.0)"]
 [metadata]
 lock-version = "2.0"
 python-versions = "^3.10"
-content-hash = "dc01d268fa528c8cd84362cdd5519fa8e46c340b91b535057b50e1841f91b7a7"
+content-hash = "f58daacfcd16a361646d4c12308da382500184f9eae271898b3bb587d780a5e3"

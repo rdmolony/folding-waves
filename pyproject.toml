@@ -13,6 +13,9 @@ django-environ = "^0.10.0"
 wagtail-bakery = "^0.6.0"
 
 
+[tool.poetry.group.dev.dependencies]
+django-extensions = "^3.2.1"
+
 [build-system]
 requires = ["poetry-core"]
 build-backend = "poetry.core.masonry.api"

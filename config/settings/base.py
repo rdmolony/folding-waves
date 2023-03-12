@@ -73,6 +73,7 @@ INSTALLED_APPS = [
     # Other 3rd Party Apps
     "bakery",
     "wagtailbakery",
+    "django_extensions" if env("DEBUG") else "",
 ]
 
 MIDDLEWARE = [
