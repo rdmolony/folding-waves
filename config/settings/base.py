@@ -74,6 +74,7 @@ INSTALLED_APPS = [
     "bakery",
     "wagtailbakery",
     "django_extensions" if env("DEBUG") else "",
+    "pattern_library" if os.environ["DEBUG"] else "",
 ]
 
 MIDDLEWARE = [
@@ -109,6 +110,9 @@ TEMPLATES = [
                 "django.contrib.auth.context_processors.auth",
                 "django.contrib.messages.context_processors.messages",
                 "wagtail.contrib.settings.context_processors.settings",
+            ],
+            "builtins": [
+                "pattern_library.loader_tags" if os.environ["DEBUG"] else "",
             ],
         },
     },
