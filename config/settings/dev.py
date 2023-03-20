@@ -14,7 +14,6 @@ except ImportError:
 BUILD_DIR = '/tmp/build/'
 
 X_FRAME_OPTIONS = "SAMEORIGIN"
-
 PATTERN_LIBRARY = {
     # Groups of templates for the pattern library navigation. The keys
     # are the group titles and the values are lists of template name prefixes that will

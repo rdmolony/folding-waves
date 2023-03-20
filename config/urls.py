@@ -18,6 +18,7 @@ urlpatterns = [
     path("docs/", include(wagtaildocs_urls)),
     # Search
     path("search/", include(crx_search_urls)),
+    *unpack([path("pattern-library/", include("pattern_library.urls"))]),
     # For anything not caught by a more specific rule above, hand over to
     # the page serving mechanism. This should be the last pattern in
     # the list:
@@ -27,6 +28,5 @@ urlpatterns = [
     #    path("pages/", include(crx_urls)),
     *unpack(staticfiles_urlpatterns()),
     *unpack(static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)),
-    *unpack([path("pattern-library/", include("pattern_library.urls"))]),
 ]
 
