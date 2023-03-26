@@ -412,6 +412,22 @@ Django = "*"
 testing = ["django-modelcluster"]
 
 [[package]]
+name = "django-simple-deploy"
+version = "0.5.14"
+description = "A management command that auto-configures a Django project for deployment."
+category = "dev"
+optional = false
+python-versions = ">=3.8"
+files = [
+    {file = "django-simple-deploy-0.5.14.tar.gz", hash = "sha256:4bf79955c1367872115bd2aa0e1f60e7f6b42d72affdb807f9b0a2be6a14641f"},
+    {file = "django_simple_deploy-0.5.14-py3-none-any.whl", hash = "sha256:76cfc99773dd79a52370898e6930325606370c4210c7a30e7f3d6a5e40b37690"},
+]
+
+[package.dependencies]
+Django = ">=3.0"
+toml = ">=0.10.2"
+
+[[package]]
 name = "django-taggit"
 version = "3.1.0"
 description = "django-taggit is a reusable Django application for simple tagging."
@@ -871,6 +887,18 @@ files = [
 docs = ["mkdocs (>=1.1,<1.2)", "mkdocs-material (>=6.2,<6.3)"]
 
 [[package]]
+name = "toml"
+version = "0.10.2"
+description = "Python Library for Tom's Obvious, Minimal Language"
+category = "dev"
+optional = false
+python-versions = ">=2.6, !=3.0.*, !=3.1.*, !=3.2.*"
+files = [
+    {file = "toml-0.10.2-py2.py3-none-any.whl", hash = "sha256:806143ae5bfb6a3c6e736a764057db0e6a0e05e338b5630894a5f779cabb4f9b"},
+    {file = "toml-0.10.2.tar.gz", hash = "sha256:b3bda1d108d5dd99f4a20d24d9c348e91c4db7ab1b749200bded2f839ccbe68f"},
+]
+
+[[package]]
 name = "tzdata"
 version = "2022.7"
 description = "Provider of IANA time zone data"
@@ -1012,4 +1040,4 @@ testing = ["Pillow (>=6.0.0,<10.0.0)", "Wand (>=0.6,<1.0)", "mock (>=3.0,<4.0)"]
 [metadata]
 lock-version = "2.0"
 python-versions = "^3.10"
-content-hash = "f58daacfcd16a361646d4c12308da382500184f9eae271898b3bb587d780a5e3"
+content-hash = "9e33c5fd858e28dd63cbc1a6e0195909de2cabb54ff07e06f434a731bc1c172a"
