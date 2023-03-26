@@ -12,21 +12,27 @@ https://docs.djangoproject.com/en/4.1/ref/settings/
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 import os
+from pathlib import Path
 
 from django.utils.translation import gettext_lazy as _
 import environ
 
 env = environ.Env(
     # set casting, default value
-    DEBUG=(bool, False)
+    DEBUG=(bool, False),
+    SECURE_HSTS_SECONDS=(int, 31536000),
+    SECURE_SSL_REDIRECT=(bool, True),
+    SESSION_COOKIE_SECURE=(bool, True),
+    CSRF_COOKIE_SECURE=(bool, True),
+    SECURE_HSTS_INCLUDE_SUBDOMAINS=(bool, True),
+    SECURE_HSTS_PRELOAD=(bool, True),
 )
 
 # Set the project base directory
-PROJECT_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-BASE_DIR = os.path.dirname(PROJECT_DIR)
+BASE_DIR = Path(__file__).parent.parent
 
 # Take environment variables from .env file
-environ.Env.read_env(os.path.join(BASE_DIR, '.env'))
+environ.Env.read_env(BASE_DIR / '.env')
 
 # False if not in os.environ because of casting above
 DEBUG = env("DEBUG")
@@ -207,3 +213,43 @@ BAKERY_MULTISITE = True
 BAKERY_VIEWS = (
 	'wagtailbakery.views.AllPublishedPagesView',
 )
+
+# Add your site's domain name(s) here.
+ALLOWED_HOSTS = [env("ALLOWED_HOSTS")]
+
+# To send email from the server, we recommend django_sendmail_backend
+# Or specify your own email backend such as an SMTP server.
+# https://docs.djangoproject.com/en/4.1/ref/settings/#email-backend
+# EMAIL_BACKEND = "django_sendmail_backend.backends.EmailBackend"
+
+# Default email address used to send messages from the website.
+DEFAULT_FROM_EMAIL = env("DEFAULT_FROM_EMAIL")
+
+# Person who gets error notifications.
+ADMINS = [
+    (env("ADMIN_NAME"), env("ADMIN_EMAIL")),
+]
+
+# A list in the same format as ADMINS that specifies who should get broken link
+# (404) notifications when BrokenLinkEmailsMiddleware is enabled.
+MANAGERS = ADMINS
+
+# Email address used to send error messages to ADMINS.
+SERVER_EMAIL = DEFAULT_FROM_EMAIL
+
+CACHES = {
+    "default": {
+        "BACKEND": "django.core.cache.backends.filebased.FileBasedCache",
+        "LOCATION": os.path.join(BASE_DIR, "cache"),  # noqa
+        "KEY_PREFIX": "coderedcms",
+        "TIMEOUT": 14400,  # in seconds
+    }
+}
+
+# NOTE: suggested by `python manage.py check --deploy`
+SECURE_HSTS_SECONDS = env("SECURE_HSTS_SECONDS")
+SECURE_SSL_REDIRECT = env("SECURE_SSL_REDIRECT")
+SESSION_COOKIE_SECURE = env("SESSION_COOKIE_SECURE")
+CSRF_COOKIE_SECURE = env("CSRF_COOKIE_SECURE")
+SECURE_HSTS_INCLUDE_SUBDOMAINS = env("SECURE_HSTS_INCLUDE_SUBDOMAINS")
+SECURE_HSTS_PRELOAD = env("SECURE_HSTS_PRELOAD")
